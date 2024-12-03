@@ -44,7 +44,7 @@ function getXAxisInterval(period: TimePeriod) {
     case "Last 7 days":
       return 0;
     case "Last 30 days":
-      return 3;
+      return 5;
     case "Last 90 days":
       return 9;
     case "Last 365 days":
@@ -130,7 +130,6 @@ export default function RevenueChart({ orders, period, color = "blue" }: Revenue
           dataKey="revenue"
           stroke="hsl(var(--muted-foreground))"
           fontSize={12}
-          width={80}
           tickLine={false}
           axisLine={false}
           tickFormatter={(value) => `$${value.toLocaleString()}`}
